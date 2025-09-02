@@ -64,7 +64,6 @@ class VGG(nn.Module):
 
         self.flatten = nn.Flatten()
         self.linear = nn.Linear(128 * 9 * 7, 5)
-        self.softmax = nn.Softmax(dim=1)
 
     def forward(self, x):
         x = self.conv1(x)
@@ -73,5 +72,4 @@ class VGG(nn.Module):
         x = self.conv4(x)
         x = self.flatten(x)
         x = self.linear(x)
-        x = self.softmax(x)
         return x
