@@ -70,3 +70,7 @@ weights/
 # *.exe Files
 *.exe
 **/*.exe
+
+# *.pt Files
+*.pt
+**/*.pt
